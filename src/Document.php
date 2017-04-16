@@ -62,30 +62,20 @@ class Document
                         $value = substr($binaryData, 16, 4);
                     }
                     break;
+                case ElementValueType::SHORT:
+                    $arr = unpack('c', substr($binaryData, 8 + 1, 2));
+                    $value = $arr[1];
+                    break;
+                case ElementValueType::INT:
                 case ElementValueType::LONG:
                     $arr = unpack('Ni', substr($binaryData, 8, $dataLength));
                     $value = $arr['i'];
                     break;
-                case ElementValueType::INT:
-                    $arr = unpack('c', substr($binaryData, 8 + 1, 2));
-                    $value = $arr[1];
-
-                    $arr = unpack('c', substr($binaryData, 8 + 2, 1));
-                    $value = $value . "." . $arr[1];
-
-                    $arr = unpack('c', substr($binaryData, 8 + 3, 1));
-                    $value = $value . "." . $arr[1];
-                    break;
                 case ElementValueType::BYTE:
                     $value = substr($binaryData, 8, $dataLength);
-
                     break;
                 case ElementValueType::STRING:
                     $arr = unpack('c', substr($binaryData, 8, $dataLength));
-                    $value = $arr[1];
-                    break;
-                case ElementValueType::SHORT:
-                    $arr = unpack('c', substr($binaryData, 8 + 1, 2));
                     $value = $arr[1];
                     break;
             }
