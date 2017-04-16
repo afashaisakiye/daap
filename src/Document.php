@@ -17,9 +17,9 @@ class Document
     protected $elementFactory;
 
     /**
-     * @var \Panlatent\DigitalAudio\Element[]
+     * @var \Panlatent\DigitalAudio\ElementStorage
      */
-    protected $elements = [];
+    protected $elements;
 
     public function __construct(ElementFactory $elementFactory, $binaryData)
     {
@@ -33,7 +33,7 @@ class Document
     }
 
     /**
-     * @return \Panlatent\DigitalAudio\Element[]
+     * @return \Panlatent\DigitalAudio\ElementStorage
      */
     public function getElements()
     {
@@ -42,7 +42,7 @@ class Document
 
     protected function parseBinaryData($binaryData)
     {
-        $elements = [];
+        $elements = new ElementStorage();
         for ($value = null; strlen($binaryData) > 8; $value = null) {
             $code = substr($binaryData, 0, 4); //$tag
             $arr = unpack('Ni', substr($binaryData, 4, 4));
@@ -82,7 +82,7 @@ class Document
             $binaryData = substr($binaryData, 8 + $dataLength, strlen($binaryData) - (8 + $dataLength));
 
             $element->setValue($value);
-            $elements[] = $element;
+            $elements->add($element);
         }
 
         return $elements;

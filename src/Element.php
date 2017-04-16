@@ -37,9 +37,9 @@ class Element
     protected $value = '';
 
     /**
-     * @var array
+     * @var \Panlatent\DigitalAudio\ElementStorage
      */
-    protected $children = [];
+    protected $children;
 
     public function __construct($code, $description, $name, $type)
     {
@@ -98,7 +98,7 @@ class Element
     }
 
     /**
-     * @return array
+     * @return \Panlatent\DigitalAudio\ElementStorage
      */
     public function getChildren()
     {
@@ -106,9 +106,9 @@ class Element
     }
 
     /**
-     * @param array $children
+     * @param \Panlatent\DigitalAudio\ElementStorage $children
      */
-    public function setChildren($children)
+    public function setChildren(ElementStorage $children)
     {
         $this->children = $children;
     }
