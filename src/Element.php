@@ -11,6 +11,8 @@ namespace Panlatent\DigitalAudio;
 
 class Element
 {
+    use ElementStorageTrait;
+
     /**
      * @var string
      */
@@ -39,7 +41,7 @@ class Element
     /**
      * @var \Panlatent\DigitalAudio\ElementStorage
      */
-    protected $children;
+    protected $elements;
 
     public function __construct($code, $description, $name, $type)
     {
@@ -102,14 +104,14 @@ class Element
      */
     public function getChildren()
     {
-        return $this->children;
+        return $this->elements;
     }
 
     /**
-     * @param \Panlatent\DigitalAudio\ElementStorage $children
+     * @param \Panlatent\DigitalAudio\ElementStorage $elements
      */
-    public function setChildren(ElementStorage $children)
+    public function setChildren(ElementStorage $elements)
     {
-        $this->children = $children;
+        $this->elements = $elements;
     }
 }

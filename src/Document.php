@@ -11,6 +11,8 @@ namespace Panlatent\DigitalAudio;
 
 class Document
 {
+    use ElementStorageTrait;
+
     /**
      * @var \Panlatent\DigitalAudio\ElementFactory
      */
