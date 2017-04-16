@@ -649,6 +649,12 @@ class ElementFactory
             ElementValueType::MAP,
         ],
         [
+            'cmgt',
+            'container',
+            'daap.container',
+            ElementValueType::MAP,
+        ],
+        [
             'mbcl',
             '',
             'dmap.bag',
