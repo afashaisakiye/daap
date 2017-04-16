@@ -655,6 +655,12 @@ class ElementFactory
             ElementValueType::MAP,
         ],
         [
+            'cmst',
+            'control container',
+            'daap.controlcontainer',
+            ElementValueType::MAP,
+        ],
+        [
             'mbcl',
             '',
             'dmap.bag',
