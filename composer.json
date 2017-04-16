@@ -1,0 +1,29 @@
+{
+    "name": "panlatent/digital-audio",
+    "description": "Digital Audio Access Protocol (DAAP) library",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "panlatent",
+            "email": "panlatent@gmail.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {
+        "php": ">=5.5"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^5.7"
+    },
+    "autoload": {
+        "psr-4": {
+            "Panlatent\\DigitalAudio\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests/"
+        }
+    }
+}
