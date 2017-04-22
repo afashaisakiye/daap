@@ -12,953 +12,796 @@ namespace Panlatent\DigitalAudio;
 class ElementFactory
 {
     protected $contentTypes = [
-        [
-            'abal',
-            '  ',
+        'abal'  => [
+            '',
             'daap.browsealbumlistung',
             ElementValueType::MAP,
         ],
-        [
-            'abar',
+        'abar'  => [
             '',
             'daap.browseartistlisting',
             ElementValueType::MAP,
         ],
-        [
-            'abcp',
+        'abcp'  => [
             '',
             'daap.browsecomposerlisting',
             ElementValueType::MAP,
         ],
-        [
-            'abgn',
+        'abgn'  => [
             '',
             'daap.browsegenrelisting',
             ElementValueType::MAP,
         ],
-        [
-            'abpl',
+        'abpl'  => [
             '',
             'daap.baseplaylist',
             ElementValueType::BYTE,
         ],
-        [
-            'abro',
+        'abro'  => [
             '',
             'daap.databasebrowse',
             ElementValueType::MAP,
         ],
-        [
-            'adbs',
+        'adbs'  => [
             'repsoonse to a /databases/id/items',
             'daap.databasesongs',
             ElementValueType::MAP,
         ],
-        [
-            'aeCR',
+        'aeCR'  => [
             '',
             'com.apple.itunes.content-rating',
             ElementValueType::STRING,
         ],
-        [
-            'aeCS',
+        'aeCS'  => [
             '',
             'com.apple.itunes.artworkchecksum',
             ElementValueType::INT,
         ],
-        [
-            'aeDL',
+        'aeDL'  => [
             '',
             'com.apple.itunes.drm-downloader-user-id',
             ElementValueType::LONG,
         ],
-        [
-            'aeDP',
+        'aeDP'  => [
             '',
             'com.apple.itunes.drm-platform-id',
             ElementValueType::INT,
         ],
-        [
-            'aeDR',
+        'aeDR'  => [
             '',
             'com.apple.itunes.drm-user-id',
             ElementValueType::LONG,
         ],
-        [
-            'aeDV',
+        'aeDV'  => [
             '',
             'com.apple.itunes.drm-versions',
             ElementValueType::INT,
         ],
-        [
-            'aeEN',
+        'aeEN'  => [
             '',
             'com.apple.itunes.episode-num-str',
             ElementValueType::INT,
         ],
-        [
-            'aeES',
+        'aeES'  => [
             '',
             'com.apple.itunes.episode-sort',
             ElementValueType::INT,
         ],
-        [
-            'aeFA',
+        'aeFA'  => [
             '',
             'com.apple.itunes.drm-family-id',
             ElementValueType::LONG,
         ],
-        [
-            'aeGD',
+        'aeGD'  => [
             '',
             'com.apple.itunes.gapless-enc-dr',
             ElementValueType::INT,
         ],
-        [
-            'aeGE',
+        'aeGE'  => [
             '',
             'com.apple.itunes.gapless-enc-del',
             ElementValueType::INT,
         ],
-        [
-            'aeGH',
+        'aeGH'  => [
             '',
             'com.apple.itunes.gapless-heur',
             ElementValueType::INT,
         ],
-        [
-            'aeGR',
+        'aeGR'  => [
             '',
             'com.apple.itunes.gapless-resy',
             ElementValueType::LONG,
         ],
-        [
-            'aeGU',
+        'aeGU'  => [
             '',
             'com.apple.itunes.gapless-dur',
             ElementValueType::LONG,
         ],
-        [
-            'aeGs',
+        'aeGs'  => [
             '',
             'com.apple.itunes.can-be-genius-seed',
             ElementValueType::BYTE,
         ],
-        [
-            'aeHD',
+        'aeHD'  => [
             '',
             'com.apple.itunes.is-hd-video',
             ElementValueType::BYTE,
         ],
-        [
-            'aeHV',
+        'aeHV'  => [
             '',
             'com.apple.itunes.has-video',
             ElementValueType::BYTE,
         ],
-        [
-            'aeK1',
+        'aeK1'  => [
             '',
             'com.apple.itunes.drm-key1-id',
             ElementValueType::LONG,
         ],
-        [
-            'aeK2',
+        'aeK2'  => [
             '',
             'com.apple.itunes.drm-key2-id',
             ElementValueType::LONG,
         ],
-        [
-            'aeMK',
+        'aeMK'  => [
             '',
             'com.apple.itunes.mediakind',
             ElementValueType::BYTE,
         ],
-        [
-            'aeMX',
+        'aeMX'  => [
             '',
             'com.apple.itunes.movie-info-xml',
             ElementValueType::STRING,
         ],
-        [
-            'aeMk',
+        'aeMk'  => [
             '',
             'com.apple.itunes.extended-media-kind',
             ElementValueType::BYTE,
         ],
-        [
-            'aeND',
+        'aeND'  => [
             '',
             'com.apple.itunes.non-drm-user-id',
             ElementValueType::LONG,
         ],
-        [
-            'aeNV',
+        'aeNV'  => [
             '',
             'com.apple.itunes.norm-volume',
             ElementValueType::INT,
         ],
-        [
-            'aePC',
+        'aePC'  => [
             '',
             'com.apple.itunes.is-podcast',
             ElementValueType::BYTE,
         ],
-        [
-            'aePP',
+        'aePP'  => [
             '',
             'com.apple.itunes.is-podcast-playlist',
             ElementValueType::BYTE,
         ],
-        [
-            'aePS',
+        'aePS'  => [
             '',
             'com.apple.itunes.special-playlist',
             ElementValueType::BYTE,
         ],
-        [
-            'aeSE',
+        'aeSE'  => [
             '',
             'com.apple.itunes.store-pers-id',
             ElementValueType::LONG,
         ],
-        [
-            'aeSG',
+        'aeSG'  => [
             '',
             'com.apple.itunes.saved-genius',
             ElementValueType::BYTE,
         ],
-        [
-            'aeSN',
+        'aeSN'  => [
             '',
             'com.apple.itunes.series-name',
             ElementValueType::STRING,
         ],
-        [
-            'aeSP',
+        'aeSP'  => [
             '',
             'com.apple.itunes.smart-playlist',
             ElementValueType::BYTE,
         ],
-        [
-            'aeSU',
+        'aeSU'  => [
             '',
             'com.apple.itunes.season-num',
             ElementValueType::INT,
         ],
-        [
-            'aeXD',
+        'aeXD'  => [
             '',
             'com.apple.itunes.xid',
             ElementValueType::STRING,
         ],
-        [
-            'aels',
+        'aels'  => [
             '',
             'com.apple.itunes.liked-state',
             ElementValueType::BYTE,
         ],
-        [
-            'agrp',
+        'agrp'  => [
             '',
             'daap.songgrouping',
             ElementValueType::STRING,
         ],
-        [
-            'ajal',
+        'ajal'  => [
             '',
             'com.apple.itunes.store.album-liked-state',
             ElementValueType::BYTE,
         ],
-        [
-            'aply',
+        'aply'  => [
             'response to /databases/id/containers',
             'daap.databaseplaylists',
             ElementValueType::MAP,
         ],
-        [
-            'apro',
+        'apro'  => [
             '',
             'daap.protocolversion',
             'version',
         ],
-        [
-            'apso',
+        'apso'  => [
             'response to /databases/id/containers/id/items',
             'daap.playlistsongs',
             ElementValueType::MAP,
         ],
-        [
-            'arif',
+        'arif'  => [
             '',
             'daap.resolveinfo',
             ElementValueType::MAP,
         ],
-        [
-            'arsv',
+        'arsv'  => [
             '',
             'daap.resolve',
             ElementValueType::MAP,
         ],
-        [
-            'asaa',
+        'asaa'  => [
             '',
             'daap.songalbumartist',
             ElementValueType::STRING,
         ],
-        [
-            'asac',
+        'asac'  => [
             '',
             'daap.songartworkcount',
             ElementValueType::SHORT,
         ],
-        [
-            'asai',
+        'asai'  => [
             '',
             'daap.songalbumid',
             ElementValueType::LONG,
         ],
-        [
-            'asal',
+        'asal'  => [
             'the song ones should be self exp.',
             'daap.songalbum',
             ElementValueType::STRING,
         ],
-        [
-            'asar',
+        'asar'  => [
             '',
             'daap.songartist',
             ElementValueType::STRING,
         ],
-        [
-            'asas',
+        'asas'  => [
             '',
             'daap.songalbumuserratingstatus',
             ElementValueType::BYTE,
         ],
-        [
-            'asbk',
+        'asbk'  => [
             '',
             'daap.bookmarkable',
             ElementValueType::BYTE,
         ],
-        [
-            'asbr',
+        'asbr'  => [
             '',
             'daap.songbitrate',
             ElementValueType::SHORT,
         ],
-        [
-            'asbt',
+        'asbt'  => [
             '',
             'daap.songsbeatsperminute',
             ElementValueType::SHORT,
         ],
-        [
-            'ascd',
+        'ascd'  => [
             '',
             'daap.songcodectype',
             ElementValueType::INT,
         ],
-        [
-            'ascm',
+        'ascm'  => [
             '',
             'daap.songcomment',
             ElementValueType::STRING,
         ],
-        [
-            'ascn',
+        'ascn'  => [
             '',
             'daap.songcontentdescription',
             ElementValueType::STRING,
         ],
-        [
-            'asco',
+        'asco'  => [
             '',
             'daap.songcompilation',
             ElementValueType::BYTE,
         ],
-        [
-            'ascp',
+        'ascp'  => [
             '',
             'daap.songcomposer',
             ElementValueType::STRING,
         ],
-        [
-            'ascr',
+        'ascr'  => [
             '',
             'daap.songcontentrating',
             ElementValueType::BYTE,
         ],
-        [
-            'ascs',
+        'ascs'  => [
             '',
             'daap.songcodecsubtype',
             ElementValueType::INT,
         ],
-        [
-            'asct',
+        'asct'  => [
             '',
             'daap.songcategory',
             ElementValueType::STRING,
         ],
-        [
-            'asda',
+        'asda'  => [
             '',
             'daap.songdateadded',
             'date',
         ],
-        [
-            'asdb',
+        'asdb'  => [
             '',
             'daap.songdisabled',
             ElementValueType::BYTE,
         ],
-        [
-            'asdc',
+        'asdc'  => [
             '',
             'daap.songdisccount',
             ElementValueType::SHORT,
         ],
-        [
-            'asdk',
+        'asdk'  => [
             '',
             'daap.songdatakind',
             ElementValueType::BYTE,
         ],
-        [
-            'asdm',
+        'asdm'  => [
             '',
             'daap.songdatemodified',
             'date',
         ],
-        [
-            'asdn',
+        'asdn'  => [
             '',
             'daap.songdiscnumber',
             ElementValueType::SHORT,
         ],
-        [
-            'asdt',
+        'asdt'  => [
             '',
             'daap.songdescription',
             ElementValueType::STRING,
         ],
-        [
-            'ased',
+        'ased'  => [
             '',
             'daap.songextradata',
             ElementValueType::SHORT,
         ],
-        [
-            'aseq',
+        'aseq'  => [
             '',
             'daap.songeqpreset',
             ElementValueType::STRING,
         ],
-        [
-            'ases',
+        'ases'  => [
             '',
             'daap.songexcludefromshuffle',
             ElementValueType::BYTE,
         ],
-        [
-            'asfm',
+        'asfm'  => [
             '',
             'daap.songformat',
             ElementValueType::STRING,
         ],
-        [
-            'asgn',
+        'asgn'  => [
             '',
             'daap.songgenre',
             ElementValueType::STRING,
         ],
-        [
-            'asgp',
+        'asgp'  => [
             '',
             'daap.songgapless',
             ElementValueType::BYTE,
         ],
-        [
-            'ashp',
+        'ashp'  => [
             '',
             'daap.songhasbeenplayed',
             ElementValueType::BYTE,
         ],
-        [
-            'askd',
+        'askd'  => [
             '',
             'daap.songlastskipdate',
             'date',
         ],
-        [
-            'askp',
+        'askp'  => [
             '',
             'daap.songuserskipcount',
             ElementValueType::INT,
         ],
-        [
-            'aslr',
+        'aslr'  => [
             '',
             'daap.songalbumuserrating',
             ElementValueType::BYTE,
         ],
-        [
-            'asls',
+        'asls'  => [
             '',
             'daap.songlongsize',
             ElementValueType::LONG,
         ],
-        [
-            'aspc',
+        'aspc'  => [
             '',
             'daap.songuserplaycount',
             ElementValueType::INT,
         ],
-        [
-            'aspl',
+        'aspl'  => [
             '',
             'daap.songdateplayed',
             'date',
         ],
-        [
-            'aspu',
+        'aspu'  => [
             '',
             'daap.songpodcasturl',
             ElementValueType::STRING,
         ],
-        [
-            'asri',
+        'asri'  => [
             '',
             'daap.songartistid',
             ElementValueType::LONG,
         ],
-        [
-            'asrs',
+        'asrs'  => [
             '',
             'daap.songuserratingstatus',
             ElementValueType::BYTE,
         ],
-        [
-            'asrv',
+        'asrv'  => [
             '',
             'daap.songrelativevolume',
             ElementValueType::BYTE,
         ],
-        [
-            'assa',
+        'assa'  => [
             '',
             'daap.sortartist',
             ElementValueType::STRING,
         ],
-        [
-            'assc',
+        'assc'  => [
             '',
             'daap.sortcomposer',
             ElementValueType::STRING,
         ],
-        [
-            'assl',
+        'assl'  => [
             '',
             'daap.sortalbumartist',
             ElementValueType::STRING,
         ],
-        [
-            'assn',
+        'assn'  => [
             '',
             'daap.sortname',
             ElementValueType::STRING,
         ],
-        [
-            'assp',
+        'assp'  => [
             '(in milliseconds)',
             'daap.songstoptime ',
             ElementValueType::INT,
         ],
-        [
-            'assr',
+        'assr'  => [
             '',
             'daap.songsamplerate',
             ElementValueType::INT,
         ],
-        [
-            'asss',
+        'asss'  => [
             '',
             'daap.sortseriesname',
             ElementValueType::STRING,
         ],
-        [
-            'asst',
+        'asst'  => [
             '(in milliseconds)',
             'daap.songstarttime ',
             ElementValueType::INT,
         ],
-        [
-            'assu',
+        'assu'  => [
             '',
             'daap.sortalbum',
             ElementValueType::STRING,
         ],
-        [
-            'assz',
+        'assz'  => [
             '',
             'daap.songsize',
             ElementValueType::INT,
         ],
-        [
-            'astc',
+        'astc'  => [
             '',
             'daap.songtrackcount',
             ElementValueType::SHORT,
         ],
-        [
-            'astm',
+        'astm'  => [
             '(in milliseconds)',
             'daap.songtime',
             ElementValueType::INT,
         ],
-        [
-            'astn',
+        'astn'  => [
             '',
             'daap.songtracknumber',
             ElementValueType::SHORT,
         ],
-        [
-            'asul',
+        'asul'  => [
             '',
             'daap.songdataurl',
             ElementValueType::STRING,
         ],
-        [
-            'asur',
+        'asur'  => [
             '',
             'daap.songuserrating',
             ElementValueType::BYTE,
         ],
-        [
-            'asyr',
+        'asyr'  => [
             '',
             'daap.songyear',
             ElementValueType::SHORT,
         ],
-        [
-            'avdb',
+        'avdb'  => [
             'response to a /databases',
             'daap.serverdatabases',
             ElementValueType::MAP,
         ],
-        [
-            'cmgt',
+        'cmgt'  => [
             'container',
             'daap.container',
             ElementValueType::MAP,
         ],
-        [
-            'cmst',
+        'cmst'  => [
             'control container',
             'daap.controlcontainer',
             ElementValueType::MAP,
         ],
-        [
-            'mbcl',
+        'mbcl'  => [
             '',
             'dmap.bag',
             ElementValueType::MAP,
         ],
-        [
-            'mccr',
+        'mccr'  => [
             'the response to the content-codes request',
             'dmap.contentcodesresponse',
             ElementValueType::MAP,
         ],
-        [
-            'mcna',
+        'mcna'  => [
             'the full name of the code',
             'dmap.contentcodesname',
             ElementValueType::STRING,
         ],
-        [
-            'mcnm',
+        'mcnm'  => [
             'the four letter code',
             'dmap.contentcodesnumber',
             ElementValueType::INT,
         ],
-        [
-            'mcon',
+        'mcon'  => [
             'an arbitrary container',
             'dmap.container',
             ElementValueType::MAP,
         ],
-        [
-            'mctc',
+        'mctc'  => [
             '',
             'dmap.containercount',
             ElementValueType::INT,
         ],
-        [
-            'mcti',
+        'mcti'  => [
             'the id of an item in its container',
             'dmap.containeritemid',
             ElementValueType::INT,
         ],
-        [
-            'mcty',
+        'mcty'  => [
             'the type of the code (see appendix b for type values)',
             'dmap.contentcodestype',
             ElementValueType::SHORT,
         ],
-        [
-            'mdcl',
-            '',
-            'dmap.dictionary',
-            ElementValueType::MAP,
-        ],
-        [
-            'mdcl',
+        'mdcl'  => [
             'a dictionary entry',
             'dmap.dictionary',
             ElementValueType::MAP,
         ],
-        [
-            'mdst',
+        'mdst'  => [
             '',
             'dmap.downloadstatus',
             ElementValueType::BYTE,
         ],
-        [
-            'meia',
+        'meia'  => [
             '',
             'dmap.itemdateadded',
             'date',
         ],
-        [
-            'meip',
+        'meip'  => [
             '',
             'dmap.itemdateplayed',
             'date',
         ],
-        [
-            'mext',
+        'mext'  => [
             '',
             'dmap.objectextradata',
             ElementValueType::SHORT,
         ],
-        [
-            'miid',
+        'miid'  => [
             'an item\'s id',
             'dmap.itemid',
             ElementValueType::INT,
         ],
-        [
-            'mikd',
+        'mikd'  => [
             'the kind of item.  So far, only \'2\' has been seen, an audio file?',
             'dmap.itemkind',
             ElementValueType::BYTE,
         ],
-        [
-            'mimc',
+        'mimc'  => [
             'number of items in a container',
             'dmap.itemcount',
             ElementValueType::INT,
         ],
-        [
-            'minm',
+        'minm'  => [
             'an items name',
             'dmap.itemname',
             ElementValueType::STRING,
         ],
-        [
-            'mlcl',
+        'mlcl'  => [
             'a list',
             'dmap.listing',
             ElementValueType::MAP,
         ],
-        [
-            'mlid',
+        'mlid'  => [
             'the session id for the login session',
             'dmap.sessionid',
             ElementValueType::INT,
         ],
-        [
-            'mlit',
+        'mlit'  => [
             'a single item in said list',
             'dmap.listingitem',
             ElementValueType::MAP,
         ],
-        [
-            'mlog',
+        'mlog'  => [
             'response to a /login',
             'dmap.loginresponse',
             ElementValueType::MAP,
         ],
-        [
-            'mpco',
+        'mpco'  => [
             '',
             'dmap.parentcontainerid',
             ElementValueType::INT,
         ],
-        [
-            'mper',
+        'mper'  => [
             'a persistent id',
             'dmap.persistentid',
             ElementValueType::LONG,
         ],
-        [
-            'mpro',
+        'mpro'  => [
             '',
             'dmap.protocolversion',
             'version',
         ],
-        [
-            'mrco',
+        'mrco'  => [
             'number of items returned in a request',
             'dmap.returnedcount',
             ElementValueType::INT,
         ],
-        [
-            'msal',
+        'msal'  => [
             '',
             'dmap.supportsuatologout',
             ElementValueType::BYTE,
         ],
-        [
-            'msau',
+        'msau'  => [
             '',
             'dmap.authenticationmethod',
             ElementValueType::BYTE,
         ],
-        [
-            'msaud',
+        'msaud' => [
             '(should be self explanatory)',
             'dmap.authenticationmethod',
             ElementValueType::BYTE,
         ],
-        [
-            'msbr',
+        'msbr'  => [
             '',
             'dmap.supportsbrowse',
             ElementValueType::BYTE,
         ],
-        [
-            'msdc',
+        'msdc'  => [
             '',
             'dmap.databasescount',
             ElementValueType::INT,
         ],
-        [
-            'msex',
+        'msex'  => [
             '',
             'dmap.supportsextensions',
             ElementValueType::BYTE,
         ],
-        [
-            'msix',
+        'msix'  => [
             '',
             'dmap.supportsindex',
             ElementValueType::BYTE,
         ],
-        [
-            'mslr',
+        'mslr'  => [
             '',
             'dmap.loginrequired',
             ElementValueType::BYTE,
         ],
-        [
-            'mspi',
+        'mspi'  => [
             '',
             'dmap.supportspersistentids',
             ElementValueType::BYTE,
         ],
-        [
-            'msqy',
+        'msqy'  => [
             '',
             'dmap.supportsquery',
             ElementValueType::BYTE,
         ],
-        [
-            'msrs',
+        'msrs'  => [
             '',
             'dmap.supportsresolve',
             ElementValueType::BYTE,
         ],
-        [
-            'msrv',
+        'msrv'  => [
             'response to a /server-info',
             'dmap.serverinforesponse',
             ElementValueType::MAP,
         ],
-        [
-            'mstm',
+        'mstm'  => [
             '',
             'dmap.timeoutinterval',
             ElementValueType::INT,
         ],
-        [
-            'msts',
+        'msts'  => [
             '',
             'dmap.statusstring',
             ElementValueType::STRING,
         ],
-        [
-            'mstt',
+        'mstt'  => [
             'the response status code, these appear to be http status codes, e.g. 200',
             'dmap.status',
             ElementValueType::INT,
         ],
-        [
-            'msup',
+        'msup'  => [
             '',
             'dmap.supportsupdate',
             ElementValueType::BYTE,
         ],
-        [
-            'msur',
+        'msur'  => [
             'revision to use for requests',
             'dmap.serverrevision',
             ElementValueType::INT,
         ],
-        [
-            'mtco',
+        'mtco'  => [
             '',
             'dmap.specifiedtotalcount number of items in response to a request',
             ElementValueType::INT,
         ],
-        [
-            'mudl',
+        'mudl'  => [
             'used in updates?  (document soon)',
             'dmap.deletedidlisting',
             ElementValueType::MAP,
         ],
-        [
-            'mupd',
+        'mupd'  => [
             'response to a /update',
             'dmap.updateresponse',
             ElementValueType::MAP,
         ],
-        [
-            'musr',
+        'musr'  => [
             '',
             'dmap.serverrevision',
             ElementValueType::INT,
         ],
-        [
-            'muty',
+        'muty'  => [
             '',
             'dmap.updatetype',
             ElementValueType::BYTE,
         ],
-        [
-            'prsv',
+        'prsv'  => [
             '',
             'daap.resolve',
             ElementValueType::MAP,
         ],
     ];
 
+    public function add($code, $description, $name, $type)
+    {
+        $this->contentTypes[$code] = [$description, $name, $type];
+    }
+
     public function create($actualCode)
     {
-        foreach ($this->contentTypes as list($code, $description, $name, $type)) {
+        foreach ($this->contentTypes as $code => list($description, $name, $type)) {
             if ($code === $actualCode) {
                 return new Element($code, $description, $name, $type);
             }
@@ -969,7 +812,7 @@ class ElementFactory
 
     public function find($actualCode)
     {
-        foreach ($this->contentTypes as list($code,,,)) {
+        foreach (array_keys($this->contentTypes) as $code) {
             if ($code === $actualCode) {
                 return true;
             }
