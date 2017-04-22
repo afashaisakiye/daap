@@ -542,6 +542,36 @@ class ElementFactory
             'daap.serverdatabases',
             ElementValueType::MAP,
         ],
+        'cmvo'  => [
+            'volume',
+            'daap.volume',
+            ElementValueType::INT,
+        ],
+        'cant'  => [
+            'song time remaining',
+            'daap.songtimeremaining',
+            ElementValueType::INT,
+        ],
+        'cast'  => [
+            'song time total',
+            'daap.songtimetotal',
+            ElementValueType::INT,
+        ],
+        'caps'  => [
+            'play status',
+            'daap.playstatus',
+            ElementValueType::STRING,
+        ],
+        'cash'  => [
+            'play shuffle',
+            'daap.playshuffle',
+            ElementValueType::STRING,
+        ],
+        'carp'  => [
+            'play repeat',
+            'daap.playrepeat',
+            ElementValueType::STRING,
+        ],
         'cmgt'  => [
             'container',
             'daap.container',
