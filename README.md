@@ -1,10 +1,10 @@
 DAAP
 =====
-[![Build Status](https://travis-ci.org/panlatent/libdaap.svg)](https://travis-ci.org/panlatent/libdaap)
-[![Latest Stable Version](https://poser.pugx.org/panlatent/libdaap/v/stable.svg)](https://packagist.org/packages/panlatent/libdaap) 
-[![Total Downloads](https://poser.pugx.org/panlatent/libdaap/downloads.svg)](https://packagist.org/packages/panlatent/libdaap) 
-[![Latest Unstable Version](https://poser.pugx.org/panlatent/libdaap/v/unstable.svg)](https://packagist.org/packages/panlatent/libdaap) 
-[![License](https://poser.pugx.org/panlatent/libdaap/license.svg)](https://packagist.org/packages/panlatent/libdaap)
+[![Build Status](https://travis-ci.org/panlatent/daap.svg)](https://travis-ci.org/panlatent/daap)
+[![Latest Stable Version](https://poser.pugx.org/panlatent/daap/v/stable.svg)](https://packagist.org/packages/panlatent/daap) 
+[![Total Downloads](https://poser.pugx.org/panlatent/daap/downloads.svg)](https://packagist.org/packages/panlatent/daap) 
+[![Latest Unstable Version](https://poser.pugx.org/panlatent/daap/v/unstable.svg)](https://packagist.org/packages/panlatent/daap) 
+[![License](https://poser.pugx.org/panlatent/daap/license.svg)](https://packagist.org/packages/panlatent/daap)
 
 Digital Audio Access Protocol library for PHP.
 
