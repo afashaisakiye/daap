@@ -1,13 +1,13 @@
 <?php
 /**
- * DigitalAudio - Digital Audio Access Protocol (DAAP) library
+ * Daap - Digital Audio Access Protocol library for PHP
  *
  * @author  panlatent@gmail.com
- * @link    https://github.com/panlatent/digital-audio
+ * @link    https://github.com/panlatent/daap
  * @license https://opensource.org/licenses/MIT
  */
 
-namespace Panlatent\DigitalAudio;
+namespace Panlatent\Daap;
 
 abstract class ElementValueType
 {

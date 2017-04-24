@@ -1,6 +1,6 @@
 {
-    "name": "panlatent/digital-audio",
-    "description": "Digital Audio Access Protocol (DAAP) library",
+    "name": "panlatent/daap",
+    "description": "Digital Audio Access Protocol library",
     "type": "library",
     "license": "MIT",
     "authors": [
@@ -18,7 +18,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Panlatent\\DigitalAudio\\": "src/"
+            "Panlatent\\Daap\\": "src/"
         }
     },
     "autoload-dev": {

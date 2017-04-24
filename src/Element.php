@@ -1,13 +1,13 @@
 <?php
 /**
- * DigitalAudio - Digital Audio Access Protocol (DAAP) library
+ * Daap - Digital Audio Access Protocol library for PHP
  *
  * @author  panlatent@gmail.com
- * @link    https://github.com/panlatent/digital-audio
+ * @link    https://github.com/panlatent/daap
  * @license https://opensource.org/licenses/MIT
  */
 
-namespace Panlatent\DigitalAudio;
+namespace Panlatent\Daap;
 
 class Element
 {
@@ -39,7 +39,7 @@ class Element
     protected $value = '';
 
     /**
-     * @var \Panlatent\DigitalAudio\ElementStorage
+     * @var \Panlatent\Daap\ElementStorage
      */
     protected $elements;
 
@@ -100,7 +100,7 @@ class Element
     }
 
     /**
-     * @return \Panlatent\DigitalAudio\ElementStorage
+     * @return \Panlatent\Daap\ElementStorage
      */
     public function getChildren()
     {
@@ -108,7 +108,7 @@ class Element
     }
 
     /**
-     * @param \Panlatent\DigitalAudio\ElementStorage $elements
+     * @param \Panlatent\Daap\ElementStorage $elements
      */
     public function setChildren(ElementStorage $elements)
     {
